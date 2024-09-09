@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav ul li a {
+    @apply pe-2 text-slate-200;
+}
+
+* {
+    @apply font-[poppins] m-[20em]
+}
+
+body {
+    @apply bg-rose-950;
+}
+
+.hero {
+    @apply w-full h-screen bg-red-200 m-20 n-20;
+}
