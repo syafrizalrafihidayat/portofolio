@@ -3,93 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>syafrizal portofolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hover-tilt:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        #about {
+            scroll-margin-top: 64px; /* Sesuaikan dengan tinggi navbar */
+        }
+        /* Tambahkan CSS untuk hamburger menu */
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            #mobile-menu {
+                display: none;
+            }
+            #mobile-menu.open {
+                display: block;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-          <img
-            src="https://play-lh.googleusercontent.com/0B503CqG8lLyTKtb1Brnxe2CWcSRPZ74aOE5gG984l6CS7NIUqeuWEgc3DIZmgEiBuVx"
-            alt="logo"
-            width="50"
-          />
-          <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">my project</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <main>
-        <section id="hero">
-            <h1>My Portofolio</h1>
-            <h2>Your Name</h2>
-            <p>Junior Software Engineer</p>
-        </section>
-  
-        <section id="about">
-          <h2>About me</h2>
-          <div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-              harum corporis unde eius nihil tenetur aliquid quod perspiciatis sit
-              illo.
-            </p>
-            <img src="/" alt="Foto Profil" width="85" />
-          </div>
-        </section>
-  
-        <section id="my-project">
-          <h2>My Project</h2>
-          <div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<body class="bg-gray-900 text-white">
+ 
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4 fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="text-2xl font-bold">syafrizal</div>
+            <!-- Desktop Menu -->
+            <ul class="desktop-menu flex space-x-6">
+                <li><a href="#about" class="hover:text-indigo-500 transition">About</a></li>
+                <li><a href="#portfolio" class="hover:text-indigo-500 transition">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-indigo-500 transition">Contact</a></li>
+            </ul>
+            <!-- Hamburger Button -->
+            <button id="hamburger-button" class="mobile-menu text-2xl focus:outline-none">
+                <span class="sr-only">Open menu</span>
+                &#9776;
+            </button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu absolute top-16 right-0 bg-gray-800 w-full text-center">
+                <ul class="flex flex-col space-y-4 py-4">
+                    <li><a href="#about" class="hover:text-indigo-500 transition">About</a></li>
+                    <li><a href="#portfolio" class="hover:text-indigo-500 transition">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-500 transition">Contact</a></li>
+                </ul>
             </div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar"  style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-red-700 to-blue-500 text-center h-screen flex flex-col justify-center items-center">
+        <img src="assets/WhatsApp Image 2024-08-15 at 07.06.47_2126af1d.jpg" alt="Profile Photo" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-white mt-6">
+        <h1 class="text-6xl font-extrabold">Hi, I'm syafrizal rafi hidayat</h1>
+        <p class="mt-4 text-2xl">A Creative Web Developer</p>
+        <a href="#portfolio" class="mt-10 inline-block px-10 py-4 bg-indigo-6 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">Explore My Work</a>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-80 pointer-events-none"></div>
+    </section>
+ 
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold">About Me</h2>
+            <p class="mt-6 text-lg text-gray-400">I specialize in creating dynamic and beautiful web pages using the latest technologies. My passion is crafting clean and elegant code that brings designs to life.</p>
+            <div class="mt-10 flex justify-center space-x-8">
+                <img src="https://febryann.my.id/public/images/skills/logo_tailwind.png" alt="Skill 1" class="w-16 h-16">
+                <img src="https://febryann.my.id/public/images/skills/logo_tailwind.png" alt="Skill 2" class="w-16 h-16">
+                <img src="https://febryann.my.id/public/images/skills/logo_tailwind.png" alt="Skill 3" class="w-16 h-16">
+                <img src="https://febryann.my.id/public/images/skills/logo_tailwind.png" alt="Skill 4" class="w-16 h-16">
             </div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar"  style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+ 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center">My Portofolio</h2>
+            <div class="mt-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-tilt">
+                    <img src="assets/pemandangan malam.jpg" alt="Project 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">kota tegal</h3>
+                        <p class="mt-4 text-gray-400">kota tegal adalah tempat kelahiran saya</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-tilt">
+                    <img src="assets/idn.jpg" alt="project 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">pendidikan</h3>
+                        <p class="mt-4 text-gray-400">sekarang saya menjadi mahasiswa di kampus politeknik idn bogor </p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-tilt">
+                    <img src="assets/kelass.jpg" alt="Project 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold">jurusan programmer</h3>
+                        <p class="mt-4 text-gray-400">saya mengambil jurusan programmer</p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar"  style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar"  style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="card">
-              <h3>Title</h3>
-              <div class="gambar"  style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/cbcaf990494295.5e19a82f1e2db.png);"></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-          </div>
-        </section>
-        
-        <section id="contact">
-          <h2>Contact me</h2>
-          <div>
-            <div>
-              <p>Alamat: Jalan Example No. 123, Kota Contoh</p>
-              <p>Email: email@example.com</p>
-              <p>Nomor: 0123-456789</p>
-            </div>
-            <div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.9715493352455!2d107.0355606726741!3d-6.525276963787136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bc6e5be3d9bd%3A0x6b9881dabd801476!2sSMK%20IDN%20Boarding%20School!5e0!3m2!1sid!2sid!4v1723724213456!5m2!1sid!2sid" frameborder="0" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer><p>Copyright &copy; micoco 2024 </p></footer>
+        </div>
+    </section>
+ 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold">Contact Me</h2>
+            <p class="mt-4 text-lg text-gray-400">Let's create something amazing together. Feel free to reach out to me with your ideas or projects.</p>
+            <form action="#" method="POST" class="mt-8">
+                <div class="grid gap-6 sm:grid-cols-2">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-indigo-500 text-white">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-indigo-500 text-white">
+                </div>
+                <textarea placeholder="Your Message" class="w-full mt-6 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-indigo-500 text-white"></textarea>
+                <button type="submit" class="mt-6 px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">Send Message</button>
+            </form>
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-900 text-center text-gray-400">
+        <p>&copy; 2024 syafrizal. All rights reserved.</p>
+        <div class="mt-4 space-x-6">
+            <a href="#" class="hover:text-white">LinkedIn</a>
+            <a href="#" class="hover:text-white">GitHub</a>
+            <a href="#" class="hover:text-white">Twitter</a>
+        </div>
+    </footer>
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+ 
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close menu when an item is clicked (optional)
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                });
+            });
+        });
+    </script>
+ 
 </body>
 </html>
